@@ -16,7 +16,7 @@ PlayState = {
 
 	create : function () {
 	 	this.background = this.game.add.sprite(0, 0,'background');
-	    this.player = this.game.add.sprite(50, 225,'player');
+	    this.player = this.game.add.sprite(50, 50,'player');
 
 	    this.background.height = this.game.height;
 	    this.background.width = this.game.width;
@@ -35,6 +35,10 @@ PlayState = {
 	        space: Phaser.KeyCode.SPACEBAR
 	    });
 
+    	this.game.input.onDown.add(function () {
+	        this.player.body.velocity.y = -600;
+	    }, this);
+
 	    this.keys.space.onDown.add(function () {
 	        this.player.body.velocity.y = -600;
 	    }, this);
@@ -45,7 +49,6 @@ PlayState = {
 		this.initScore();
 
 	    this.timer = this.game.time.events.loop(1000, this.addPipes, this); 
-	    this.addPipes();
 	},
 
 	update : function () {
