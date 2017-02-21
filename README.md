@@ -1,5 +1,5 @@
 # flappy-birds-phaser
 
-Juego básico desarrollado con Phaser.
+Basic game done with phaser
 
-Tan solo hay que ejecutarlo en un servidor y ya funciona!
+Run it in a server and play!
